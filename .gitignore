@@ -1,0 +1,17 @@
+# Data are NOT redistributed: download from the original sources (see README).
+data/raw/
+data/processed/*
+!data/processed/.gitkeep
+external/
+results/pinn4soh_audit/pinn_runs/
+*.mat
+*.npz
+# Python / OS / editors
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.env.*
+.DS_Store
+.ipynb_checkpoints/

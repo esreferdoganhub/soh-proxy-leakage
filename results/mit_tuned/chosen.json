@@ -1,0 +1,425 @@
+{
+ "ops|mean": {
+  "cfg_id": 0,
+  "cfg": {
+   "view": "flat"
+  },
+  "val_macro_mae": 0.03711864306693985
+ },
+ "ops|last": {
+  "cfg_id": 5,
+  "cfg": {
+   "alpha": 100,
+   "view": "last"
+  },
+  "val_macro_mae": 0.02498189237360885
+ },
+ "ops|ridge": {
+  "cfg_id": 4,
+  "cfg": {
+   "alpha": 10,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.02221321885621075
+ },
+ "ops|hgb": {
+  "cfg_id": 2,
+  "cfg": {
+   "max_iter": 200,
+   "learning_rate": 0.1,
+   "max_leaf_nodes": 15,
+   "l2_regularization": 1.0,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.01546841002113825
+ },
+ "ops|lstm": {
+  "cfg_id": 1,
+  "cfg": {
+   "hidden": 128,
+   "layers": 2,
+   "lr": 0.0003,
+   "dropout": 0.2
+  },
+  "val_macro_mae": 0.01799389428312055
+ },
+ "ops|transformer": {
+  "cfg_id": 7,
+  "cfg": {
+   "d_model": 128,
+   "layers": 2,
+   "lr": 0.001,
+   "dropout": 0.1
+  },
+  "val_macro_mae": 0.01504646315190345
+ },
+ "ops|hat_net": {
+  "cfg_id": 1,
+  "cfg": {
+   "lr": 0.003,
+   "weight_decay": 0.01,
+   "batch": 512
+  },
+  "val_macro_mae": 0.0201025127531274
+ },
+ "cycle|mean": {
+  "cfg_id": 0,
+  "cfg": {
+   "view": "flat"
+  },
+  "val_macro_mae": 0.03711864306693985
+ },
+ "cycle|last": {
+  "cfg_id": 5,
+  "cfg": {
+   "alpha": 100,
+   "view": "last"
+  },
+  "val_macro_mae": 0.02164720359111295
+ },
+ "cycle|ridge": {
+  "cfg_id": 0,
+  "cfg": {
+   "alpha": 0.001,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.017046402233015498
+ },
+ "cycle|hgb": {
+  "cfg_id": 5,
+  "cfg": {
+   "max_iter": 200,
+   "learning_rate": 0.03,
+   "max_leaf_nodes": 15,
+   "l2_regularization": 0.0,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.0133618631511429
+ },
+ "cycle|lstm": {
+  "cfg_id": 0,
+  "cfg": {
+   "hidden": 128,
+   "layers": 2,
+   "lr": 0.001,
+   "dropout": 0.0
+  },
+  "val_macro_mae": 0.01448594530627715
+ },
+ "cycle|transformer": {
+  "cfg_id": 7,
+  "cfg": {
+   "d_model": 128,
+   "layers": 2,
+   "lr": 0.001,
+   "dropout": 0.1
+  },
+  "val_macro_mae": 0.01326717654439175
+ },
+ "cycle|hat_net": {
+  "cfg_id": 6,
+  "cfg": {
+   "lr": 0.001,
+   "weight_decay": 0.0001,
+   "batch": 128
+  },
+  "val_macro_mae": 0.01489694820300325
+ },
+ "curve@3.2|mean": {
+  "cfg_id": 0,
+  "cfg": {
+   "view": "flat"
+  },
+  "val_macro_mae": 0.03720223496758965
+ },
+ "curve@3.2|last": {
+  "cfg_id": 2,
+  "cfg": {
+   "alpha": 0.1,
+   "view": "last"
+  },
+  "val_macro_mae": 0.011373199510241
+ },
+ "curve@3.2|ridge": {
+  "cfg_id": 5,
+  "cfg": {
+   "alpha": 100,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.011093441347934649
+ },
+ "curve@3.2|hgb": {
+  "cfg_id": 1,
+  "cfg": {
+   "max_iter": 200,
+   "learning_rate": 0.03,
+   "max_leaf_nodes": 63,
+   "l2_regularization": 0.0,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.010514300094567351
+ },
+ "curve@3.2|lstm": {
+  "cfg_id": 2,
+  "cfg": {
+   "hidden": 64,
+   "layers": 2,
+   "lr": 0.003,
+   "dropout": 0.0
+  },
+  "val_macro_mae": 0.0091729577643012
+ },
+ "curve@3.2|transformer": {
+  "cfg_id": 1,
+  "cfg": {
+   "d_model": 128,
+   "layers": 2,
+   "lr": 0.0003,
+   "dropout": 0.0
+  },
+  "val_macro_mae": 0.00909496625689295
+ },
+ "curve@3.2|hat_net": {
+  "cfg_id": 6,
+  "cfg": {
+   "lr": 0.001,
+   "weight_decay": 0.0001,
+   "batch": 128
+  },
+  "val_macro_mae": 0.00983235806128695
+ },
+ "curve@2.0|mean": {
+  "cfg_id": 0,
+  "cfg": {
+   "view": "flat"
+  },
+  "val_macro_mae": 0.03720223496758965
+ },
+ "curve@2.0|last": {
+  "cfg_id": 0,
+  "cfg": {
+   "alpha": 0.001,
+   "view": "last"
+  },
+  "val_macro_mae": 0.0096922597762099
+ },
+ "curve@2.0|ridge": {
+  "cfg_id": 6,
+  "cfg": {
+   "alpha": 1000.0,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.01047787770604415
+ },
+ "curve@2.0|hgb": {
+  "cfg_id": 5,
+  "cfg": {
+   "max_iter": 200,
+   "learning_rate": 0.03,
+   "max_leaf_nodes": 15,
+   "l2_regularization": 0.0,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.01011487137506355
+ },
+ "curve@2.0|lstm": {
+  "cfg_id": 3,
+  "cfg": {
+   "hidden": 64,
+   "layers": 1,
+   "lr": 0.001,
+   "dropout": 0.0
+  },
+  "val_macro_mae": 0.0085338243577433
+ },
+ "curve@2.0|transformer": {
+  "cfg_id": 1,
+  "cfg": {
+   "d_model": 128,
+   "layers": 2,
+   "lr": 0.0003,
+   "dropout": 0.0
+  },
+  "val_macro_mae": 0.00916547276765885
+ },
+ "curve@2.0|hat_net": {
+  "cfg_id": 4,
+  "cfg": {
+   "lr": 0.0003,
+   "weight_decay": 0.0001,
+   "batch": 512
+  },
+  "val_macro_mae": 0.01059008819528995
+ },
+ "leaky|mean": {
+  "cfg_id": 0,
+  "cfg": {
+   "view": "flat"
+  },
+  "val_macro_mae": 0.03711864306693985
+ },
+ "leaky|last": {
+  "cfg_id": 0,
+  "cfg": {
+   "alpha": 0.001,
+   "view": "last"
+  },
+  "val_macro_mae": 0.00033176533447415
+ },
+ "leaky|ridge": {
+  "cfg_id": 4,
+  "cfg": {
+   "alpha": 10,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.00048103959890885003
+ },
+ "leaky|hgb": {
+  "cfg_id": 0,
+  "cfg": {
+   "max_iter": 500,
+   "learning_rate": 0.1,
+   "max_leaf_nodes": 63,
+   "l2_regularization": 1.0,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.00048213599919175003
+ },
+ "leaky|lstm": {
+  "cfg_id": 6,
+  "cfg": {
+   "hidden": 32,
+   "layers": 1,
+   "lr": 0.003,
+   "dropout": 0.0
+  },
+  "val_macro_mae": 0.000409098115166
+ },
+ "leaky|transformer": {
+  "cfg_id": 3,
+  "cfg": {
+   "d_model": 32,
+   "layers": 2,
+   "lr": 0.001,
+   "dropout": 0.1
+  },
+  "val_macro_mae": 0.00044724855596485
+ },
+ "leaky|hat_net": {
+  "cfg_id": 6,
+  "cfg": {
+   "lr": 0.001,
+   "weight_decay": 0.0001,
+   "batch": 128
+  },
+  "val_macro_mae": 0.0034274267381987997
+ },
+ "curve@3.1|mean": {
+  "cfg_id": 0,
+  "cfg": {
+   "view": "flat"
+  },
+  "val_macro_mae": 0.03720223496758965
+ },
+ "curve@3.1|last": {
+  "cfg_id": 4,
+  "cfg": {
+   "alpha": 10,
+   "view": "last"
+  },
+  "val_macro_mae": 0.0112068202518122
+ },
+ "curve@3.1|ridge": {
+  "cfg_id": 4,
+  "cfg": {
+   "alpha": 10,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.010912089914965749
+ },
+ "curve@3.1|hgb": {
+  "cfg_id": 1,
+  "cfg": {
+   "max_iter": 200,
+   "learning_rate": 0.03,
+   "max_leaf_nodes": 63,
+   "l2_regularization": 0.0,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.0102976386498276
+ },
+ "curve@3.1|lstm": {
+  "cfg_id": 4,
+  "cfg": {
+   "hidden": 64,
+   "layers": 1,
+   "lr": 0.003,
+   "dropout": 0.2
+  },
+  "val_macro_mae": 0.009345554360678649
+ },
+ "curve@3.1|transformer": {
+  "cfg_id": 1,
+  "cfg": {
+   "d_model": 128,
+   "layers": 2,
+   "lr": 0.0003,
+   "dropout": 0.0
+  },
+  "val_macro_mae": 0.0085766868310441
+ },
+ "curve@3.0|mean": {
+  "cfg_id": 0,
+  "cfg": {
+   "view": "flat"
+  },
+  "val_macro_mae": 0.03720223496758965
+ },
+ "curve@3.0|last": {
+  "cfg_id": 0,
+  "cfg": {
+   "alpha": 0.001,
+   "view": "last"
+  },
+  "val_macro_mae": 0.01114801305199135
+ },
+ "curve@3.0|ridge": {
+  "cfg_id": 3,
+  "cfg": {
+   "alpha": 1,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.0107668639393523
+ },
+ "curve@3.0|hgb": {
+  "cfg_id": 1,
+  "cfg": {
+   "max_iter": 200,
+   "learning_rate": 0.03,
+   "max_leaf_nodes": 63,
+   "l2_regularization": 0.0,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.009935850135252649
+ },
+ "curve@3.0|lstm": {
+  "cfg_id": 3,
+  "cfg": {
+   "hidden": 64,
+   "layers": 1,
+   "lr": 0.001,
+   "dropout": 0.0
+  },
+  "val_macro_mae": 0.00902416236931455
+ },
+ "curve@3.0|transformer": {
+  "cfg_id": 7,
+  "cfg": {
+   "d_model": 128,
+   "layers": 2,
+   "lr": 0.001,
+   "dropout": 0.1
+  },
+  "val_macro_mae": 0.0090250816857932
+ }
+}
