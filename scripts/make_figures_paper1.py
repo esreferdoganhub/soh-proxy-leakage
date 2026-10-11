@@ -22,7 +22,8 @@ ROOT = Path(__file__).resolve().parent.parent
 R = ROOT / "results"
 OUT = ROOT / "figures"
 
-SURFACE, INK, INK2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e4e3df"
+SURFACE, INK, INK2, GRID = "#ffffff", "#000000", "#000000", "#d9d9d9"
+EDGE = "#000000"  # Origin tarzı: siyah kenarlı işaret/çubuk
 MODEL = {  # renk, işaret, etiket
     "hgb": ("#2a78d6", "o", "Gradient boosting (HGB)"),
     "lstm": ("#eb6834", "s", "LSTM"),
@@ -42,19 +43,22 @@ FEAT_LABEL = {
     "leaky": "+ charge capacity\n(QCharge, proxy)",
 }
 
-mpl.rcParams.update({
-    "font.family": "DejaVu Sans", "font.size": 8.5, "axes.titlesize": 9.5, "axes.labelsize": 8.5,
-    "axes.edgecolor": INK2, "axes.labelcolor": INK, "xtick.color": INK2, "ytick.color": INK2,
+mpl.rcParams.update({  # OriginLab görünümü: kapalı çerçeve, içe tikler, ızgara yok, Arial
+    "font.family": "Arial", "font.size": 9, "axes.titlesize": 9.5, "axes.labelsize": 9.5,
+    "axes.edgecolor": INK, "axes.labelcolor": INK, "xtick.color": INK, "ytick.color": INK,
     "text.color": INK, "axes.facecolor": SURFACE, "figure.facecolor": "white",
-    "axes.spines.top": False, "axes.spines.right": False, "axes.linewidth": 0.6,
-    "xtick.major.width": 0.6, "ytick.major.width": 0.6, "legend.frameon": False,
+    "axes.spines.top": True, "axes.spines.right": True, "axes.linewidth": 1.0,
+    "xtick.direction": "in", "ytick.direction": "in", "xtick.top": True, "ytick.right": True,
+    "xtick.minor.visible": True, "ytick.minor.visible": True,
+    "xtick.major.size": 5, "ytick.major.size": 5, "xtick.minor.size": 2.5, "ytick.minor.size": 2.5,
+    "xtick.major.width": 1.0, "ytick.major.width": 1.0, "xtick.minor.width": 0.8, "ytick.minor.width": 0.8,
+    "legend.frameon": True, "legend.edgecolor": INK, "legend.fancybox": False, "legend.framealpha": 1.0,
     "pdf.fonttype": 42, "savefig.bbox": "tight", "savefig.pad_inches": 0.03,
 })
 
 
 def grid(ax, axis="x"):
-    ax.grid(axis=axis, color=GRID, linewidth=0.6, zorder=0)
-    ax.set_axisbelow(True)
+    """Origin tarzında ızgara çizgisi yok (eski çağrılar için boş bırakıldı)."""
 
 
 def save(fig, name):
@@ -79,7 +83,7 @@ def fig1(s):
     y = np.arange(len(FEATS))[::-1]
     c = MODEL["hgb"][0]
     ax.hlines(y, d.CI95_lo, d.CI95_hi, color=c, linewidth=2, zorder=3)
-    ax.scatter(d.macro_MAE, y, s=34, color=c, edgecolor=SURFACE, linewidth=1.2, zorder=4)
+    ax.scatter(d.macro_MAE, y, s=34, color=c, edgecolor=EDGE, linewidth=1.2, zorder=4)
     for yi, (f, r) in zip(y, d.iterrows()):
         ax.text(r.CI95_hi * 1.12, yi, f"{r.macro_MAE:.2f}", va="center", fontsize=8, color=INK)
     ax.axvline(mean_base, color=INK2, linestyle=(0, (3, 2)), linewidth=0.8)
@@ -89,6 +93,7 @@ def fig1(s):
     ax.set_xticks([0.05, 0.1, 0.2, 0.5, 1, 2, 5])
     ax.set_xticklabels(["0.05", "0.1", "0.2", "0.5", "1", "2", "5"])
     ax.set_yticks(y)
+    ax.yaxis.set_minor_locator(mpl.ticker.NullLocator())  # kategorik eksen
     ax.set_yticklabels([FEAT_LABEL[f] for f in FEATS], fontsize=7.8)
     ax.set_xlabel("SOH error, cell-averaged MAE (% of nominal, log scale)")
     ratio = d.loc["ops", "macro_MAE"] / d.loc["leaky", "macro_MAE"]
@@ -113,10 +118,11 @@ def fig2(s):
         ok = d.macro_MAE.notna()
         yy = base[ok.values] + o
         ax.hlines(yy, d.CI95_lo[ok], d.CI95_hi[ok], color=c, linewidth=1.6, zorder=3)
-        ax.scatter(d.macro_MAE[ok], yy, marker=mk, s=26, color=c, edgecolor=SURFACE, linewidth=0.8, zorder=4, label=lab)
+        ax.scatter(d.macro_MAE[ok], yy, marker=mk, s=26, color=c, edgecolor=EDGE, linewidth=0.8, zorder=4, label=lab)
     for yb in base[:-1] - 0.5:
         ax.axhline(yb, color=GRID, linewidth=0.6)
     ax.set_yticks(base)
+    ax.yaxis.set_minor_locator(mpl.ticker.NullLocator())
     ax.set_yticklabels([FEAT_LABEL[f] for f in feats], fontsize=7.8)
     ax.set_xlabel("SOH error, cell-averaged MAE (% of nominal) with 95 % bootstrap CI over cells")
     ax.set_xlim(0.6, 2.45)
@@ -137,7 +143,7 @@ def fig3(s):
         d = d.sort_values("x")
         ax.fill_between(d.x, d.CI95_lo, d.CI95_hi, color=c, alpha=0.12, linewidth=0)
         ax.plot(d.x, d.macro_MAE, color=c, linewidth=2, marker=mk, markersize=5.5,
-                markeredgecolor=SURFACE, markeredgewidth=0.8, label=lab)
+                markeredgecolor=EDGE, markeredgewidth=0.8, label=lab)
     h = s[(s.model == "hgb")].set_index("features").macro_MAE
     gain_total = h["ops"] - h["curve@2.0"]
     gain21 = h["ops"] - h["curve@3.2"]
@@ -173,14 +179,16 @@ def fig4():
         for j, (lab, t, key) in enumerate([("PINN", P, "pinn"), ("HGB", H, "hgb")]):
             c = MODEL[key][0]
             xs = x + (j - 0.5) * (bw + 0.02)
-            ax.bar(xs, t[cond], width=bw, color=c, zorder=3, label=MODEL[key][2] if cond == "A" else None)
+            ax.bar(xs, t[cond], width=bw, color=c, edgecolor=EDGE, linewidth=0.8, zorder=3, label=MODEL[key][2] if cond == "A" else None)
             for xi, v in zip(xs, t[cond]):
                 ax.text(xi, v + 0.03, f"{v:.2f}", ha="center", fontsize=6.8, color=INK)
         ax.set_xticks(x)
+        ax.xaxis.set_minor_locator(mpl.ticker.NullLocator())
         ax.set_xticklabels([f"{d}\n({ncell[d]} cells)" for d in order], fontsize=7.6)
         ax.set_title(titles[cond], fontsize=8.3, loc="left")
         grid(ax, "y")
     axes[0].set_ylabel("SOH MAE (% of nominal)")
+    axes[0].set_ylim(0, 1.55)  # kapalı çerçevede değer etiketleri için pay
     axes[0].legend(fontsize=7.4, loc="upper left", bbox_to_anchor=(0, 1.32), ncol=2)
     save(fig, "fig4_pinn_audit")
     return P, H
@@ -197,7 +205,7 @@ def fig5(s):
         r = s[(s.model == m) & (s.features == "ops")].iloc[0]
         t = max(secs[m], 0.05)
         ax.vlines(t, r.CI95_lo, r.CI95_hi, color=c, linewidth=1.6, zorder=3)
-        ax.scatter(t, r.macro_MAE, marker=mk, s=40, color=c, edgecolor=SURFACE, linewidth=0.8, zorder=4)
+        ax.scatter(t, r.macro_MAE, marker=mk, s=40, color=c, edgecolor=EDGE, linewidth=0.8, zorder=4)
         fx, _ = lab_off[m]
         name = lab.split(" (")[0] + (" (<0.1 s)" if secs[m] < 0.05 else "")
         ax.text(t * fx, r.macro_MAE, name, fontsize=7.4, va="center", ha="left" if fx > 1 else "right", color=INK)
