@@ -1,8 +1,10 @@
 # Proxy features and honest baselines in battery SOH estimation
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23760837.svg)](https://doi.org/10.5281/zenodo.23760837)
+
 Code and results for the manuscript
 
-> **Proxy features and honest baselines in lithium-ion battery state-of-health estimation: a leakage audit across four public datasets** (under preparation).
+> **Proxy features and honest baselines in lithium-ion battery state-of-health estimation: a leakage audit across six public datasets** (submitted to Journal of Energy Storage).
 
 The study asks two questions:
 
