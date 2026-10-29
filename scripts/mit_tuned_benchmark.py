@@ -23,6 +23,7 @@ Kullanım:
 
 import argparse
 import copy
+import gc
 import itertools
 import json
 import random
@@ -57,9 +58,20 @@ GRIDS = {
 }
 TORCH_MODELS = {"lstm", "transformer", "hat_net"}
 
+# Büyük bütçe (hakem itirazı: K=8 derin modeller için az mı?). Her ızgara ≥190 kombinasyon;
+# her modelden EŞİT sayıda (K) yapılandırma rastgele çekilir.
+GRIDS_LARGE = {
+    "hgb": {"max_iter": [100, 200, 500, 1000], "learning_rate": [0.02, 0.05, 0.1, 0.2],
+            "max_leaf_nodes": [7, 15, 31, 63], "l2_regularization": [0.0, 0.1, 1.0, 10.0], "view": ["flat"]},
+    "lstm": {"hidden": [32, 64, 128, 256], "layers": [1, 2, 3], "lr": [1e-4, 3e-4, 1e-3, 3e-3],
+             "dropout": [0.0, 0.1, 0.2, 0.3]},
+    "transformer": {"d_model": [32, 64, 128, 256], "layers": [1, 2, 3, 4], "lr": [1e-4, 3e-4, 1e-3, 3e-3],
+                    "dropout": [0.0, 0.1, 0.2]},
+}
 
-def sample_configs(model: str, K: int, seed: int = 123) -> list[dict]:
-    g = GRIDS[model]
+
+def sample_configs(model: str, K: int, seed: int = 123, large: bool = False) -> list[dict]:
+    g = (GRIDS_LARGE if large and model in GRIDS_LARGE else GRIDS)[model]
     allc = [dict(zip(g, v)) for v in itertools.product(*g.values())]
     if len(allc) <= K:
         return allc
@@ -162,7 +174,8 @@ def fit_torch(model, cfg, Xtr, ytr, Xva, yva, cva, seed, epochs, patience, devic
             opt.step()
         s = mb.macro_mae(yva, predict(Xva), cva)
         if s < best[0]:
-            best, wait = (s, ep, copy.deepcopy(net.state_dict())), 0
+            # en iyi ağırlıkları CPU'da tut (MPS belleğinde birikmesin)
+            best, wait = (s, ep, {k: v.detach().to("cpu", copy=True) for k, v in net.state_dict().items()}), 0
         else:
             wait += 1
             if wait >= patience:
@@ -209,7 +222,17 @@ def fold_data(df, cols, seed, k, folds, T, stride, cache):
     return cache[key]
 
 
-def run_one(model, cfg, data, seed, a, device):
+def free_memory():
+    """Her eğitimden sonra Python ve MPS/CUDA önbelleğini boşalt (bellek sızıntısını önler)."""
+    gc.collect()
+    if torch.backends.mps.is_available():
+        torch.mps.empty_cache()
+    elif torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
+
+def run_one(model, cfg, data, seed, a, device, need_test=False):
+    """Eğitir; doğrulama MAE'si ve (istenirse) test tahminlerini döndürür, modeli bellekten atar."""
     Xtr, ytr, Xva, yva, cva, Xte, yte, cte = data
     t0 = time.time()
     if model in TORCH_MODELS:
@@ -217,7 +240,10 @@ def run_one(model, cfg, data, seed, a, device):
     else:
         pred, info = fit_sklearn(model, cfg, Xtr, ytr, seed)
     val = mb.macro_mae(yva, pred(Xva), cva)
-    return pred, val, info, time.time() - t0
+    p_test = pred(Xte) if need_test else None
+    del pred
+    free_memory()
+    return p_test, val, info, time.time() - t0
 
 
 def main(a):
@@ -233,7 +259,7 @@ def main(a):
         cache = {}
         print(f"\n=== {fs}: {df.cell.nunique()} hücre, {len(cols)} özellik", flush=True)
         for model in a.models:
-            cfgs = sample_configs(model, a.K)
+            cfgs = sample_configs(model, a.K, large=a.grid == "large")
             # ── 1) ayar ──
             for ci, cfg in enumerate(cfgs):
                 for k in TUNE_FOLDS:
@@ -259,8 +285,8 @@ def main(a):
                     if final_led.has(key):
                         continue
                     data = fold_data(df, cols, seed, k, a.folds, a.T, a.stride, cache_s)
-                    pred, val, info, dt = run_one(model, cfgs[best_ci], data, seed, a, device)
-                    pc = mb.per_cell(data[6], pred(data[5]), data[7])
+                    p_test, val, info, dt = run_one(model, cfgs[best_ci], data, seed, a, device, need_test=True)
+                    pc = mb.per_cell(data[6], p_test, data[7])
                     final_led.add([{"phase": "final", "features": fs, "model": model, "cfg_id": best_ci, "seed": seed,
                                     "fold": k, "cell": c, **v, "secs": dt} for c, v in pc.items()])
                     print(f"  final {model:11s} seed{seed} fold{k} test={np.mean([v['mae'] for v in pc.values()]):.4f} ({dt:.0f}s)", flush=True)
@@ -284,5 +310,6 @@ if __name__ == "__main__":
     ap.add_argument("--stride", type=int, default=5)
     ap.add_argument("--epochs", type=int, default=60)
     ap.add_argument("--patience", type=int, default=8)
+    ap.add_argument("--grid", choices=["default", "large"], default="default")
     ap.add_argument("--out", default=str(ROOT / "results" / "mit_tuned"))
     main(ap.parse_args())

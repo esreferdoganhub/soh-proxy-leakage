@@ -1,0 +1,64 @@
+{
+ "ops|hgb": {
+  "cfg_id": 26,
+  "cfg": {
+   "max_iter": 1000,
+   "learning_rate": 0.05,
+   "max_leaf_nodes": 15,
+   "l2_regularization": 1.0,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.015109498872970601
+ },
+ "ops|lstm": {
+  "cfg_id": 10,
+  "cfg": {
+   "hidden": 256,
+   "layers": 3,
+   "lr": 0.0003,
+   "dropout": 0.1
+  },
+  "val_macro_mae": 0.01727044452471945
+ },
+ "ops|transformer": {
+  "cfg_id": 16,
+  "cfg": {
+   "d_model": 64,
+   "layers": 2,
+   "lr": 0.003,
+   "dropout": 0.1
+  },
+  "val_macro_mae": 0.01488395505829855
+ },
+ "curve@3.2|hgb": {
+  "cfg_id": 48,
+  "cfg": {
+   "max_iter": 500,
+   "learning_rate": 0.02,
+   "max_leaf_nodes": 31,
+   "l2_regularization": 10.0,
+   "view": "flat"
+  },
+  "val_macro_mae": 0.01047370893913485
+ },
+ "curve@3.2|lstm": {
+  "cfg_id": 46,
+  "cfg": {
+   "hidden": 256,
+   "layers": 2,
+   "lr": 0.001,
+   "dropout": 0.2
+  },
+  "val_macro_mae": 0.009259724634160301
+ },
+ "curve@3.2|transformer": {
+  "cfg_id": 9,
+  "cfg": {
+   "d_model": 128,
+   "layers": 2,
+   "lr": 0.003,
+   "dropout": 0.0
+  },
+  "val_macro_mae": 0.0089493201874
+ }
+}

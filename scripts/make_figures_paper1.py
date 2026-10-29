@@ -34,13 +34,13 @@ MODEL = {  # renk, işaret, etiket
 }
 FEATS = ["ops", "cycle", "curve@3.2", "curve@3.1", "curve@3.0", "curve@2.0", "leaky"]
 FEAT_LABEL = {
-    "ops": "BMS signals only\n(IR, T, charge time)",
+    "ops": "BMS signals only\n(internal resistance,\ntemperature, charge time)",
     "cycle": "+ cycle count",
     "curve@3.2": "+ discharge curve ≥3.2 V\n(~21 % of capacity)",
     "curve@3.1": "+ curve ≥3.1 V (~58 %)",
     "curve@3.0": "+ curve ≥3.0 V (~74 %)",
     "curve@2.0": "+ full discharge curve",
-    "leaky": "+ charge capacity\n(QCharge, proxy)",
+    "leaky": "+ charge capacity\n(proxy feature)",
 }
 
 mpl.rcParams.update({  # OriginLab görünümü: kapalı çerçeve, içe tikler, ızgara yok, Arial
@@ -95,7 +95,7 @@ def fig1(s):
     ax.set_yticks(y)
     ax.yaxis.set_minor_locator(mpl.ticker.NullLocator())  # kategorik eksen
     ax.set_yticklabels([FEAT_LABEL[f] for f in FEATS], fontsize=7.8)
-    ax.set_xlabel("SOH error, cell-averaged MAE (% of nominal, log scale)")
+    ax.set_xlabel("SOH error, cell-averaged mean absolute error\n(% of nominal, log scale)")
     ratio = d.loc["ops", "macro_MAE"] / d.loc["leaky", "macro_MAE"]
     ax.annotate(f"one proxy feature:\n{ratio:.0f}× lower apparent error", xy=(d.loc["leaky", "macro_MAE"], y[-1] + 0.12),
                 xytext=(0.075, y[-1] + 1.35), fontsize=7.5, color=INK, va="center",
@@ -124,7 +124,7 @@ def fig2(s):
     ax.set_yticks(base)
     ax.yaxis.set_minor_locator(mpl.ticker.NullLocator())
     ax.set_yticklabels([FEAT_LABEL[f] for f in feats], fontsize=7.8)
-    ax.set_xlabel("SOH error, cell-averaged MAE (% of nominal) with 95 % bootstrap CI over cells")
+    ax.set_xlabel("SOH error, cell-averaged mean absolute error (% of nominal)\nwith 95 % bootstrap confidence interval over cells")
     ax.set_xlim(0.6, 2.45)
     ax.legend(loc="upper center", bbox_to_anchor=(0.45, 1.13), ncol=3, fontsize=7.6, handletextpad=0.3, columnspacing=1.0)
     ax.text(2.43, base[-2] - 0.62, "HAT-Net not run on ≥3.1 V / ≥3.0 V sets (cost)", ha="right", fontsize=6.8, color=INK2)
@@ -151,7 +151,7 @@ def fig3(s):
                 xy=(21, h["curve@3.2"] + 0.03), xytext=(30, 1.55), fontsize=7.3, color=INK,
                 arrowprops=dict(arrowstyle="-", color=INK2, linewidth=0.6))
     ax.set_xlabel("Share of capacity covered by the observed\ndischarge-curve window (%)")
-    ax.set_ylabel("SOH MAE (% of nominal)")
+    ax.set_ylabel("SOH mean absolute error\n(% of nominal)")
     ax.set_xticks([0, 21, 58, 74, 100])
     ax.set_ylim(0.7, 2.0)
     ax.legend(fontsize=7.4, loc="upper right")
@@ -187,7 +187,7 @@ def fig4():
         ax.set_xticklabels([f"{d}\n({ncell[d]} cells)" for d in order], fontsize=7.6)
         ax.set_title(titles[cond], fontsize=8.3, loc="left")
         grid(ax, "y")
-    axes[0].set_ylabel("SOH MAE (% of nominal)")
+    axes[0].set_ylabel("SOH mean absolute error\n(% of nominal)")
     axes[0].set_ylim(0, 1.55)  # kapalı çerçevede değer etiketleri için pay
     axes[0].legend(fontsize=7.4, loc="upper left", bbox_to_anchor=(0, 1.32), ncol=2)
     save(fig, "fig4_pinn_audit")
@@ -213,7 +213,7 @@ def fig5(s):
     ax.set_xlim(0.02, 2000)
     ax.set_ylim(1.2, 2.4)
     ax.set_xlabel("Training time per fit on a laptop (s, log scale)")
-    ax.set_ylabel("SOH MAE (% of nominal), BMS signals only")
+    ax.set_ylabel("SOH mean absolute error (% of nominal),\nBMS signals only")
     grid(ax, "y")
     save(fig, "fig5_cost_accuracy")
 

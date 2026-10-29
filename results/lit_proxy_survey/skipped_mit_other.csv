@@ -1,0 +1,167 @@
+doi,title,reason
+10.1038/s42256-021-00312-3,Machine learning pipeline for battery state-of-health estimation,nasa_calce_stratum
+10.1109/access.2020.2980961,Machine Learning Applied to Electrified Vehicle Battery State of Charge and State of Health Estimation: State-of-the-Art,review
+10.1016/j.est.2020.101741,A novel deep learning framework for state of health estimation of lithium-ion battery,no_full_text
+10.1016/j.apenergy.2021.117346,A review of non-probabilistic machine learning-based state of health estimation techniques for Lithium-ion battery,review
+10.1038/s41467-023-38458-w,Deep learning to estimate lithium-ion battery state of health without additional degradation experiments,nasa_calce_stratum
+10.1016/j.est.2019.100817,A deep learning method for online capacity estimation of lithium-ion batteries,no_full_text
+10.1109/tvt.2020.3014932,State-of-Health Estimation and Remaining-Useful-Life Prediction for Lithium-Ion Battery Using a Hybrid Data-Driven Method,no_full_text
+10.1016/j.energy.2023.127585,An improved CNN-LSTM model-based state-of-health estimation approach for lithium-ion batteries,no_full_text
+10.1016/j.jpowsour.2020.228863,Online capacity estimation of lithium-ion batteries with deep long short-term memory networks,no_full_text
+10.3390/wevj12030113,A Review of Lithium-Ion Battery State of Health Estimation and Prediction Methods,review
+10.1186/s41601-022-00261-y,Online estimation of SOH for lithium-ion battery based on SSA-Elman neural network,no_full_text (publisher/DOAJ returned 403)
+10.1016/j.est.2022.104646,Estimation of the state of health (SOH) of batteries using discrete curvature feature extraction,no_full_text
+10.1109/tpel.2022.3144504,Multistage State of Health Estimation of Lithium-Ion Battery With High Tolerance to Heavily Partial Charging,nasa_calce_stratum
+10.1016/j.est.2023.106680,Convolutional autoencoder-based SOH estimation of lithium-ion batteries using electrochemical impedance spectroscopy,no_full_text
+10.1016/j.energy.2023.127734,Hybrid deep neural network with dimension attention for state-of-health estimation of Lithium-ion Batteries,no_full_text
+10.1016/j.apenergy.2022.120307,State of health estimation of lithium-ion batteries with a temporal convolutional neural network using partial load profiles,no_full_text (zenodo 403)
+10.1016/j.rser.2023.113967,Analyzing electric vehicle battery health performance using supervised machine learning,no_full_text
+10.1016/j.est.2023.107734,A hybrid neural network model with attention mechanism for state of health estimation of lithium-ion batteries,no_full_text
+10.1016/j.est.2023.109884,"Open access dataset, code library and benchmarking deep learning approaches for state-of-health estimation of lithium-ion batteries",no_full_text
+10.1016/j.energy.2022.124812,State of health estimation for lithium-ion battery based on energy features,no_full_text
+10.1016/j.energy.2023.127675,A data-driven approach for estimating state-of-health of lithium-ion batteries considering internal resistance,no_full_text
+10.1016/j.est.2023.109248,State of health estimation of lithium-ion batteries based on Mixers-bidirectional temporal convolutional neural network,no_full_text
+10.1016/j.est.2023.109370,Improved LSTM based state of health estimation using random segments of the charging curves for lithium-ion batteries,no_full_text (Elsevier OA but sciencedirect blocks automated access 403)
+10.1155/2023/4297545,State of Health Estimation Methods for Lithium-Ion Batteries,review
+10.1016/j.energy.2024.133418,State of health estimation of lithium-ion battery during fast charging process based on BiLSTM-Transformer,no_full_text
+10.1016/j.ijoes.2024.100747,"Joint estimation of State of Charge (SOC) and State of Health (SOH) for lithium ion batteries using Support Vector Machine (SVM), Convolutional Neural Network (CNN) and Long Sort Term Memory Network (LSTM) models","no_full_text (Elsevier OA, sciencedirect 403)"
+10.1016/j.jpowsour.2022.232466,State of health estimation of lithium-ion battery with automatic feature extraction and self-attention learning mechanism,"no_full_text (Elsevier OA, sciencedirect 403)"
+10.1109/access.2020.3047732,Batteries State of Health Estimation via Efficient Neural Networks With Multiple Channel Charging Profiles,nasa_calce_stratum
+10.1016/j.est.2023.110389,A guide to equivalent circuit fitting for impedance analysis and battery state estimation,review/tutorial (ECM fitting guide)
+10.1109/access.2024.3380452,"Comprehensive Review of Machine Learning, Deep Learning, and Digital Twin Data-Driven Approaches in Battery Health Prediction of Electric Vehicles",review
+10.3390/en15031185,A Convolutional Neural Network Approach for Estimation of Li-Ion Battery State of Health from Charge Profiles,nasa_calce_stratum
+10.1016/j.jechem.2023.05.034,Boosting battery state of health estimation based on self-supervised learning,no_full_text (repository page without text; Elsevier 403)
+10.1093/ce/zkad054,Electric vehicle battery capacity degradation and health estimation using machine-learning techniques: a review,review
+10.1016/j.apenergy.2022.120516,Capacity estimation of lithium-ion batteries based on optimized charging voltage section and virtual sample generation,"no_full_text (Elsevier OA, sciencedirect 403)"
+10.1016/j.egyr.2023.01.109,HFCM-LSTM: A novel hybrid framework for state-of-health estimation of lithium-ion battery,"no_full_text (Elsevier OA, sciencedirect/DOAJ 403)"
+10.1002/er.7013,A generative adversarial network‐based synthetic data augmentation technique for battery condition evaluation,no_full_text (Wiley 403)
+10.3390/en16093855,Cloud-Based Deep Learning for Co-Estimation of Battery State of Charge and State of Health,no_public_dataset_used (MIT/Toyota only cited; SOH evaluated on proprietary 135 Ah EV cell data)
+10.1016/j.est.2022.104209,Neural ordinary differential equations and recurrent neural networks for predicting the state of health of batteries,no_full_text (figshare preprint not retrievable)
+10.1016/j.etran.2023.100245,Battery health prognostic with sensor-free differential temperature voltammetry reconstruction and capacity estimation based on multi-domain adaptation,no_full_text (repository 405)
+10.3390/en15124399,A New Hybrid Neural Network Method for State-of-Health Estimation of Lithium-Ion Battery,nasa_calce_stratum
+10.1109/access.2021.3050557,Bayesian Network Based State-of-Health Estimation for Battery on Electric Vehicle Application and its Validation Through Real-World Data,no_public_dataset_used (proprietary EV fleet data)
+10.1038/s41598-022-16692-4,Transfer learning based generalized framework for state of health estimation of Li-ion cells,nasa_calce_stratum
+10.1016/j.egyai.2024.100413,Data-driven strategy for state of health prediction and anomaly detection in lithium-ion batteries,no_full_text (HAL returned stub)
+10.1149/1945-7111/ac5bac,A Data-Driven Model Framework Based on Deep Learning for Estimating the States of Lithium-Ion Batteries,no_full_text (IOP blocks automated access)
+10.1016/j.epsr.2024.110889,Comparative study of machine learning techniques for the state of health estimation of Li-Ion batteries,"no_full_text (Elsevier OA, sciencedirect 403)"
+10.3390/batteries9020094,Online State of Health Estimation of Lithium-Ion Batteries Based on Charging Process and Long Short-Term Memory Recurrent Neural Network,nasa_calce_stratum
+10.3390/en17143502,Transformer-Based Deep Learning Models for State of Charge and State of Health Estimation of Li-Ion Batteries: A Survey Study,review
+10.1109/tii.2022.3205942,A Transferable Multistage Model With Cycling Discrepancy Learning for Lithium-Ion Battery State of Health Estimation,nasa_calce_stratum
+10.3390/batteries9020120,Lithium-Ion Battery State of Health Estimation with Multi-Feature Collaborative Analysis and Deep Learning Method,nasa_calce_stratum
+10.3390/batteries9060329,A Deep Learning Approach for State-of-Health Estimation of Lithium-Ion Batteries Based on a Multi-Feature and Attention Mechanism Collaboration,nasa_calce_stratum
+10.3390/en16114423,Comparing Machine Learning Strategies for SoH Estimation of Lithium-Ion Batteries Using a Feature-Based Approach,nasa_calce_stratum
+10.3390/en12132524,A State of Health Estimation Framework for Lithium-Ion Batteries Using Transfer Components Analysis,nasa_calce_stratum
+10.1002/qre.3424,A Bayesian deep learning pipeline for lithium‐ion battery SOH estimation with uncertainty quantification,no_full_text (Wiley 403)
+10.1016/j.est.2025.116559,Physics-informed neural networks for small sample state of health estimation of lithium-ion batteries,"no_full_text (Elsevier OA, sciencedirect 403)"
+10.1016/j.est.2025.119549,A time series physics-informed neural network framework for the state of health estimation of lithium-ion batteries,no_full_text
+10.1016/j.energy.2024.131710,A hybrid data-driven method optimized by physical rules for online state collaborative estimation of lithium-ion batteries,no_full_text
+10.1109/tte.2023.3266499,State-of-Health Estimation of Li-Ion Batteries Using Semiparametric Adaptive Transfer Learning,no_full_text
+10.1016/j.ijoes.2023.100111,A novel state of health estimation approach based on polynomial model for lithium-ion batteries,"no_full_text (Elsevier OA, sciencedirect 403)"
+10.1016/j.isci.2022.105638,Remaining useful life and state of health prediction for lithium batteries based on differential thermal voltammetry and a deep learning model,out_of_scope_forecasting (LSTM sequence input includes past SOH labels; joint RUL/SOH prediction)
+10.3390/en12244772,Data-Driven Ohmic Resistance Estimation of Battery Packs for Electric Vehicles,"out_of_scope (ohmic resistance estimation, not capacity SOH)"
+10.1109/jsen.2023.3341857,A Correlation-Augmented Informer-Based Method for State-of-Health Estimation of Li-Ion Batteries,no_full_text
+10.3390/en16010023,"Intelligent SOX Estimation for Automotive Battery Management Systems: State-of-the-Art Deep Learning Approaches, Open Issues, and Future Research Opportunities",review
+10.1109/tim.2024.3417600,State of Health Estimation of Lithium-Ion Batteries Based on Multihealth Features Fusion and Improved Group Method of Data Handling,no_full_text
+10.1007/s40843-023-2665-8,Progress in the prognosis of battery degradation and estimation of battery states,review
+10.1016/j.neucom.2025.130181,SOH estimation of lithium-ion batteries subject to partly missing data: A Kolmogorov–Arnold–Linformer model,no_full_text
+10.1155/2023/8569161,State-of-Health Estimation for Lithium-Ion Battery Based on an Attention-Based CNN-GRU Model with Reconstructed Feature Series,no_full_text (Hindawi/Wiley 403)
+10.1016/j.jpowsour.2024.235813,Rapid estimation of lithium-ion battery capacity and resistances from short duration current pulses,no_full_text
+10.1109/access.2024.3410675,Joint State of Charge and State of Health Estimation Using Bidirectional LSTM and Bayesian Hyperparameter Optimization,no_full_text (DOAJ/publisher 403)
+10.3390/s22239474,A Learning-Based Vehicle-Cloud Collaboration Approach for Joint Estimation of State-of-Energy and State-of-Health,nasa_calce_stratum
+10.1016/j.est.2024.110749,High-precision collaborative estimation of lithium-ion battery state of health and remaining useful life based on call activation function library-long short term memory neural network algorithm,no_full_text
+10.1002/bte2.20240036,A CNN‐LSTM Method Based on Voltage Deviation for Predicting the State of Health of Lithium‐Ion Batteries,no_full_text (Wiley 403)
+10.1002/ente.202301065,Li‐Ion Battery State of Health Estimation Using Hybrid Decision Tree Model Optimized by Bayesian Optimization,no_full_text
+10.3390/s22155536,Estimation of Online State of Charge and State of Health Based on Neural Network Model Banks Using Lithium Batteries,nasa_calce_stratum
+10.1149/1945-7111/ad29c4,Estimation of SOH of Lithium-Ion Batteries Based on PSO-Bi GRU-Attention Network,no_full_text (IOP blocks automated access)
+10.1016/j.est.2024.114711,Co-estimation of state of health and remaining useful life for lithium-ion batteries using a hybrid optimized framework,no_full_text
+10.1016/j.est.2025.116455,Parallel neural network combined with adaptive Kalman filter for co-estimation of SOH and SOC of lithium-ion batteries,no_full_text
+10.1016/j.egyr.2025.05.027,Large language model-based methodology for data-driven health prediction of Lithium-ion batteries,"no_full_text (Elsevier OA, sciencedirect 403)"
+10.1002/ente.202301039,Convolutional Neural Network‐Long Short‐Term Memory‐Based State of Health Estimation for Li‐Ion Batteries under Multiple Working Conditions,no_full_text
+10.35629/5252-0610452484,Artificial Intelligence-Driven Strategies for Advancing Lithium-Ion Battery Performance and Safety,review
+10.1007/s40747-024-01458-4,A knowledge distillation based cross-modal learning framework for the lithium-ion battery state of health estimation,no_full_text (DOAJ/publisher 403)
+10.3390/en18051236,Lithium-Ion Battery State of Health Estimation Based on Feature Reconstruction and Transformer-GRU Parallel Architecture,nasa_calce_stratum
+10.3390/en18133248,SOH and RUL Estimation for Lithium-Ion Batteries Based on Partial Charging Curve Features,nasa_calce_stratum
+10.1016/j.jpowsour.2024.235601,Regression based battery state of health estimation for multiple electric vehicle fast charging protocols,no_full_text (repository 403)
+10.3390/batteries10040139,A Novel Feature Engineering-Based SOH Estimation Method for Lithium-Ion Battery with Downgraded Laboratory Data,no_public_dataset_used (own 36 Ah cells; Severson only cited)
+10.3390/batteries9050280,Transfer Learning Based on Transferability Measures for State of Health Prediction of Lithium-Ion Batteries,out_of_scope_forecasting (multi-step look-ahead SOH forecast / RUL)
+10.1016/j.apenergy.2025.126375,Learning Li-ion battery health and degradation modes from data with aging-aware circuit models,out_of_scope (per-cell aging-aware ECM + GP system identification; no feature-based estimator with train/test) [judgment call]
+10.1016/j.jpowsour.2025.236607,A state of health estimation method for lithium-ion batteries based on initial charging segment and Gated Recurrent Unit neural network,"no_full_text (Elsevier OA, sciencedirect 403)"
+10.1016/j.measurement.2025.118579,Data-driven lithium-ion battery SOH prediction: A novel SHMM-transformer-BiGRU hybrid neural network method,no_full_text
+10.3390/wevj16110594,Machine Learning Techniques for Battery State of Health Prediction: A Comparative Review,nasa_calce_stratum
+10.1016/j.energy.2025.139753,Physical informed neural network for SOH estimation of lithium-ion battery with electrochemical mechanism,no_full_text
+10.1016/j.est.2024.115034,Enhanced co-estimation of state of health and state of charge in lithium-ion batteries using discharge voltage and an optimized feed-forward neural network,"no_full_text (Elsevier OA, sciencedirect 403)"
+10.1109/tvt.2023.3337855,Short Term Charging Data Based Battery State of Health and State of Charge Estimation Using Feature Pyramid,no_full_text
+10.1038/s41598-024-69424-1,Estimation of lithium-ion battery health state using MHATTCN network with multi-health indicators inputs,nasa_calce_stratum
+10.1002/ese3.1992,SOC and SOH Prediction of Lithium‐Ion Batteries Based on LSTM–AUKF Joint Algorithm,no_full_text (Wiley/DOAJ 403)
+10.1007/s11708-024-0969-x,A novel state of health estimation model for lithium-ion batteries incorporating signal processing and optimized machine learning methods,no_full_text
+10.3390/en17092154,Health State Assessment of Lithium-Ion Batteries Based on Multi-Health Feature Fusion and Improved Informer Modeling,nasa_calce_stratum
+10.3390/ai6070149,Integrated Framework of LSTM and Physical-Informed Neural Network for Lithium-Ion Battery Degradation Modeling and Prediction,no_full_text (DOAJ/publisher 403)
+10.1016/j.heliyon.2024.e39121,State-of-health estimation and classification of series-connected batteries by using deep learning based hybrid decision approach,nasa_calce_stratum
+10.3390/wevj16020073,A Brief Overview of Modeling Estimation of State of Health for an Electric Vehicle’s Li-Ion Batteries,review
+10.1038/s44172-025-00488-1,Efficient estimating and clustering lithium-ion batteries with a deep-learning approach,no_public_dataset_identified (retired-battery data; no named public dataset)
+10.1109/access.2022.3217478,ARNS: A Data-Driven Approach for SoH Estimation of Lithium-Ion Battery Using Nested Sequence Models With Considering Relaxation Effect,no_full_text (redirect to non-publisher host failed)
+10.3390/en16031420,Research on State-of-Health Estimation for Lithium-Ion Batteries Based on the Charging Phase,nasa_calce_stratum
+10.3390/wevj16020057,A Systematic Mapping Study on State Estimation Techniques for Lithium-Ion Batteries in Electric Vehicles,review
+10.3390/batteries10010010,Real-Time Lithium Battery Aging Prediction Based on Capacity Estimation and Deep Learning Methods,out_of_scope (capacity estimated by model-based GLS-Nernst curve fitting; ML used only to forecast future capacity)
+10.1109/tim.2024.3457955,Lithium-Ion Battery State of Health Estimation Method Based on Frequency-Domain-Assisted Data Decoupling and Time–Frequency Features Compensation Learning Network,no_full_text
+10.3390/su16156316,State of Health Estimation for Lithium-Ion Batteries Based on Transferable Long Short-Term Memory Optimized Using Harris Hawk Algorithm,nasa_calce_stratum
+10.3390/batteries9120585,A Novel Method for State of Health Estimation of Lithium-Ion Batteries Based on Deep Learning Neural Network and Transfer Learning,nasa_calce_stratum
+10.3390/en18205439,Transformer-Based Transfer Learning for Battery State-of-Health Estimation,nasa_calce_stratum
+10.1016/j.energy.2025.134697,Deep learning model-based real-time state-of-health estimation of lithium-ion batteries under dynamic operating conditions,no_full_text
+10.1016/j.est.2025.116134,CTBANet: A new method for state of health estimation of lithium-ion batteries,no_full_text
+10.1016/j.est.2024.114112,State of health estimation of lithium-ion batteries based on interval voltage features,no_full_text
+10.1016/j.jechem.2025.06.030,Localized feature selection augmented dual-stream fusion network for state of health estimation of lithium-ion batteries,no_full_text
+10.1149/1945-7111/acc696,Data-Driven State of Health Estimation for Lithium-Ion Batteries Based on Universal Feature Selection,no_full_text (IOP blocks automated access)
+10.1016/j.ijoes.2025.101008,Enhanced state of health prediction for lithium-ion batteries using a hybrid convolutional–Kolmogorov–Arnold network,"no_full_text (Elsevier OA, sciencedirect 403)"
+10.1016/j.ijoes.2025.100988,State of health and remaining useful life estimation of lithium-ion battery based on parallel deep learning methods,"no_full_text (Elsevier OA, sciencedirect 403)"
+10.1002/ente.202300567,Joint State‐of‐Charge and State‐of‐Health Estimation for Lithium‐Ion Batteries Based on Improved Lebesgue Sampling and Division of Aging Stage,no_full_text
+10.1016/j.est.2025.119415,A novel state of health estimation method for lithium-ion battery based on multi-feature extraction and fusion model with bidirectional feature extraction,no_full_text
+10.1016/j.energy.2025.139521,Synergistic integration of Kolmogorov-Arnold networks with RNN for enhanced lithium-ion battery state-of-health estimation with optimized feature extraction,"no_full_text (Elsevier OA, sciencedirect 403)"
+10.1016/j.xcrp.2024.102363,Toward advanced estimation of state of health for integral lithium-ion battery pack,nasa_calce_stratum
+10.1149/1945-7111/ad1e40,State-of-Health Estimation of Lithium-ion Batteries Based on Singular Value Decomposition and an Improved Group Method of Data Handling,no_full_text (IOP blocks automated access)
+10.1016/j.neucom.2023.02.031,An overview of data-driven battery health estimation technology for battery management system,review
+10.3390/en16114403,Cloud-Based Artificial Intelligence Framework for Battery Management System,review
+10.3390/en18030746,State of the Art in Electric Batteries’ State-of-Health (SoH) Estimation with Machine Learning: A Review,review
+10.3390/batteries9070351,Battery State of Health Estimate Strategies: From Data Analysis to End-Cloud Collaborative Framework,review
+10.3390/batteries11010032,"State of Charge and State of Health Estimation in Electric Vehicles: Challenges, Approaches and Future Directions",review
+10.3390/batteries10100356,Evaluation of Advances in Battery Health Prediction for Electric Vehicles from Traditional Linear Filters to Latest Machine Learning Approaches,review
+10.3390/batteries11110426,"Advances in Battery Modeling and Management Systems: A Comprehensive Review of Techniques, Challenges, and Future Perspectives",review
+10.3390/ma18010145,"State of Health Estimation and Battery Management: A Review of Health Indicators, Models and Machine Learning",review
+10.1109/ojia.2024.3354899,Advancing Lithium-Ion Battery Health Prognostics With Deep Learning: A Review and Case Study,review
+10.3390/en18020337,Predictive Modeling for Electric Vehicle Battery State of Health: A Comprehensive Literature Review,review
+10.3390/en16020632,Models for Battery Health Assessment: A Comparative Evaluation,review
+10.1109/access.2023.3293726,Joint Prediction of Li-ion Battery State of Charge and State of Health Based on the DRSN-CW-LSTM Model,no_full_text (DOAJ/publisher 403)
+10.1016/j.apenergy.2024.123122,Driving behavior-guided battery health monitoring for electric vehicles using extreme learning machine,nasa_calce_stratum
+10.1002/elsa.202400024,Extending Equivalent Circuit Models for State of Charge and Lifetime Estimation,"out_of_scope (ECM extension, model-based)"
+10.1002/qre.3771,Battery State of Health Estimation Based on Energy Features and ResNet‐SVR Model,no_full_text (Wiley 403)
+10.1016/j.est.2025.119146,The cooperative estimation of state of charge and state of health for lithium-ion batteries based on a Shared-Memory Parallel Peephole Long Short-Term Memory network,"no_full_text (Elsevier OA, sciencedirect 403)"
+10.1016/j.jpowsour.2025.239046,Attention-assisted neural ordinary differential equation model for the state of health estimation of lithium-ion batteries with high accuracy,no_full_text (SSRN/Elsevier 403)
+10.1049/2023/8839034,Li‐Ion Battery State of Health Estimation Based on Short Random Charging Segment and Improved Long Short‐Term Memory,no_full_text (Wiley/DOAJ 403)
+10.1016/j.est.2022.106277,State of health estimation for Li-ion battery using characteristic voltage intervals and genetic algorithm optimized back propagation neural network,no_full_text (no OA location in OpenAlex)
+10.1016/j.est.2024.113388,Edge–cloud collaborative estimation lithium-ion battery SOH based on MEWOA-VMD and Transformer,no_full_text (no OA location in OpenAlex)
+10.1016/j.ress.2024.110450,Lithium-ion battery state of health estimation using a hybrid model with electrochemical impedance spectroscopy,no_full_text (no OA location in OpenAlex)
+10.1016/j.est.2023.109498,State-of-health and remaining-useful-life estimations of lithium-ion battery based on temporal convolutional network-long short-term memory,no_full_text (no OA location in OpenAlex)
+10.1007/s43236-021-00307-8,SOH estimation of lithium-ion batteries based on least squares support vector machine error compensation model,no_full_text (no OA location in OpenAlex)
+10.1016/j.eswa.2023.121904,Jellyfish optimized recurrent neural network for state of health estimation of lithium-ion batteries,no_full_text (no OA location in OpenAlex)
+10.1016/j.est.2023.108579,Voltage relaxation-based state-of-health estimation of lithium-ion batteries using convolutional neural networks and transfer learning,no_full_text (no OA location in OpenAlex)
+10.1016/j.apenergy.2023.122332,Lithium-ion battery state-of-health estimation: A self-supervised framework incorporating weak labels,no_full_text (no OA location in OpenAlex)
+10.1109/tte.2023.3324760,Multitimescale Feature Extraction From Multisensor Data Using Deep Neural Network for Battery State-of-Charge and State-of-Health Co-Estimation,no_full_text (no OA location in OpenAlex)
+10.1016/j.est.2023.109191,Data-driven state of health estimation for lithium-ion battery based on voltage variation curves,no_full_text (no OA location in OpenAlex)
+10.1016/j.energy.2025.135163,State-of-health prediction of lithium-ion batteries using feature fusion and a hybrid neural network model,no_full_text (no OA location in OpenAlex)
+10.1016/j.jpowsour.2024.235450,State-of-health estimation for lithium-ion batteries based on electrochemical impedance spectroscopy measurements combined with unscented Kalman filter,no_full_text (no OA location in OpenAlex)
+10.1016/j.est.2024.114579,SOH prediction of lithium-ion batteries using a hybrid model approach integrating single particle model and neural networks,no_full_text (no OA location in OpenAlex)
+10.1016/j.electacta.2025.146110,A method for estimating lithium-ion battery state of health based on physics-informed hybrid neural network,no_full_text (no OA location in OpenAlex)
+10.1109/tec.2024.3407136,Data-Driven State of Health Estimation Method of Lithium-ion Batteries for Partial Charging Curves,no_full_text (no OA location in OpenAlex)
+10.1007/s42154-022-00175-3,An Enhanced Data-Driven Model for Lithium-Ion Battery State-of-Health Estimation with Optimized Features and Prior Knowledge,no_full_text (no OA location in OpenAlex)
+10.1016/j.engappai.2024.108666,Health prognosis via feature optimization and convolutional neural network for lithium-ion batteries,no_full_text (no OA location in OpenAlex)
+10.1109/tim.2024.3476593,A Novel SOH Estimation Method With Attentional Feature Fusion Considering Differential Temperature Features for Lithium-Ion Batteries,no_full_text (no OA location in OpenAlex)
+10.1016/j.jpowsour.2024.234680,State of health estimation for lithium-ion batteries using a hybrid neural network model with Multi-scale Convolutional Attention Mechanism,no_full_text (no OA location in OpenAlex)
+10.1016/j.energy.2025.138027,Interpretable deep learning with uncertainty quantification for lithium-ion battery SOH estimation,no_full_text (no OA location in OpenAlex)
+10.1109/tte.2022.3199115,Developing an Online Data-Driven State of Health Estimation of Lithium-Ion Batteries Under Random Sensor Measurement Unavailability,no_full_text (no OA location in OpenAlex)
+10.1109/tim.2023.3348894,Battery Health Prognosis Based on Sliding Window Sampling of Charging Curves and Independently Recurrent Neural Network,no_full_text (no OA location in OpenAlex)
+10.1016/j.est.2023.108638,An efficient state-of-health estimation method for lithium-ion batteries based on feature-importance ranking strategy and PSO-GRNN algorithm,no_full_text (no OA location in OpenAlex)
+10.1016/j.energy.2023.129279,Stacking integrated learning model via ELM and GRU with mixture correntropy loss for robust state of health estimation of lithium-ion batteries,no_full_text (no OA location in OpenAlex)
+10.1016/j.energy.2025.137172,Lithium-ion battery state-of-health estimation based on TVFEMD and BiLSTM-Attention,no_full_text (no OA location in OpenAlex)
+10.1007/s11581-025-06454-3,State of health estimation of lithium-ion batteries based on the fusion of aging feature extraction and SSA-ELM machine learning algorithms,no_full_text (no OA location in OpenAlex)
+10.1109/tte.2023.3283572,Online State-of-Health Estimation of Lithium-Ion Batteries Based on a Novel Equal Voltage Range Sampling Count Number Health Indicator,no_full_text (no OA location in OpenAlex)
+10.1016/j.energy.2025.138229,Physics-informed hierarchical perception modulation network for lithium-ion battery health management,no_full_text (no OA location in OpenAlex)

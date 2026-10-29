@@ -1,0 +1,5 @@
+features,best,vs,n_cells,best_wins_cells,wilcoxon_p
+curve@3.2,transformer,hgb,124,58,0.9840837284251257
+curve@3.2,transformer,lstm,124,65,0.5884195098881619
+ops,hgb,lstm,124,87,5.09265468514164e-06
+ops,hgb,transformer,124,73,0.013558982609145759
