@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code or results, please cite it as below."
+title: "Proxy features and honest baselines in lithium-ion battery state-of-health estimation: code and results"
+type: software
+authors:
+  - family-names: "Erdoğan"
+    given-names: "Eşref"
+    affiliation: "Department of Technical Sciences, Adana Organized Industrial Region Vocational School, Çukurova University"
+repository-code: "https://github.com/esreferdoganhub/soh-proxy-leakage"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-29"
+keywords:
+  - lithium-ion battery
+  - state of health
+  - data leakage
+  - machine learning
+  - benchmarking
