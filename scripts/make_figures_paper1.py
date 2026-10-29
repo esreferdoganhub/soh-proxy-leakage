@@ -36,9 +36,9 @@ FEATS = ["ops", "cycle", "curve@3.2", "curve@3.1", "curve@3.0", "curve@2.0", "le
 FEAT_LABEL = {
     "ops": "BMS signals only\n(internal resistance,\ntemperature, charge time)",
     "cycle": "+ cycle count",
-    "curve@3.2": "+ discharge curve ≥3.2 V\n(~21 % of capacity)",
-    "curve@3.1": "+ curve ≥3.1 V (~58 %)",
-    "curve@3.0": "+ curve ≥3.0 V (~74 %)",
+    "curve@3.2": "+ discharge curve ≥3.2 V\n(~28 % of capacity)",
+    "curve@3.1": "+ curve ≥3.1 V (~66 %)",
+    "curve@3.0": "+ curve ≥3.0 V (~81 %)",
     "curve@2.0": "+ full discharge curve",
     "leaky": "+ charge capacity\n(proxy feature)",
 }
@@ -134,7 +134,7 @@ def fig2(s):
 
 # ─────────────── Şekil 3: kısmi eğri doz-yanıt ───────────────
 def fig3(s):
-    x = {"ops": 0, "curve@3.2": 21, "curve@3.1": 58, "curve@3.0": 74, "curve@2.0": 100}
+    x = {"ops": 0, "curve@3.2": 28, "curve@3.1": 66, "curve@3.0": 81, "curve@2.0": 100}  # 124 hücrenin medyan kapsamı (mit_all_curves.npz)
     fig, ax = plt.subplots(figsize=(4.2, 3.0))
     for m in ["hgb", "lstm", "transformer"]:
         c, mk, lab = MODEL[m]
@@ -147,12 +147,12 @@ def fig3(s):
     h = s[(s.model == "hgb")].set_index("features").macro_MAE
     gain_total = h["ops"] - h["curve@2.0"]
     gain21 = h["ops"] - h["curve@3.2"]
-    ax.annotate(f"{gain21 / gain_total * 100:.0f} % of the full-curve gain\nwith 21 % of capacity observed",
-                xy=(21, h["curve@3.2"] + 0.03), xytext=(30, 1.55), fontsize=7.3, color=INK,
+    ax.annotate(f"{gain21 / gain_total * 100:.0f} % of the full-curve gain\nwith 28 % of capacity observed",
+                xy=(28, h["curve@3.2"] + 0.03), xytext=(36, 1.55), fontsize=7.3, color=INK,
                 arrowprops=dict(arrowstyle="-", color=INK2, linewidth=0.6))
     ax.set_xlabel("Share of capacity covered by the observed\ndischarge-curve window (%)")
     ax.set_ylabel("SOH mean absolute error\n(% of nominal)")
-    ax.set_xticks([0, 21, 58, 74, 100])
+    ax.set_xticks([0, 28, 66, 81, 100])
     ax.set_ylim(0.7, 2.0)
     ax.legend(fontsize=7.4, loc="upper right")
     grid(ax, "y")

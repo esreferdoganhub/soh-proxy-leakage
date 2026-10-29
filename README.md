@@ -15,11 +15,11 @@ The study asks two questions:
 |---|---|
 | MIT/Severson, 124 LFP cells, gradient boosting | SOH MAE 1.44 % with BMS-measurable signals vs **0.05 %** after adding one proxy feature (charge capacity): **28× apparent improvement** |
 | Same, BMS-measurable signals, equal tuning budget | Gradient boosting 1.44 % < Transformer 1.58 % < LSTM 1.80 % < CNN–Transformer 1.87 % (Wilcoxon *p* ≤ 0.01 over cells) |
-| Partial discharge curve (≈21 % of capacity) | Recovers 76 % of the full-curve accuracy gain |
+| Partial discharge curve (≈28 % of capacity, median over 124 cells) | Recovers 76 % of the full-curve accuracy gain |
 | PINN audit (Wang et al., 2024), 4 datasets, 82 test cells | Untuned gradient boosting beats the PINN in 10 of 11 experiments (authors' preprocessing: 0.79 % vs 0.93 %; deployable preprocessing: 0.66 % vs 0.73 %) |
-| Larger tuning budget (50 configurations per model) | Ranking unchanged: with BMS signals gradient boosting 1.43 % < Transformer 1.55 % < LSTM 1.72 % |
+| Larger tuning budget (50 configurations per model) | Ranking unchanged: with BMS signals gradient boosting 1.42 % < Transformer 1.55 % < LSTM 1.71 % |
 | Literature survey, 50 highly cited open-access SOH papers | 12 use at least one capacity-equivalent proxy as reported in their methods, 9 more use full constant-current charge time; 22 split cycles of the same cell between training and test; 12 report a simple baseline; 2 of 37 checked papers share code |
-| Proxies from the literature on NASA PCoE and CALCE CS2 cells (leave-one-cell-out) | Discharge time to the cutoff voltage lowers MAE 5.4× (NASA, 2.94 % → 0.54 %) and 32× (CALCE, 2.85 % → 0.09 %); errors reported in the literature on these cells (median 0.18–0.61 %) sit in the range of our proxy runs |
+| Proxies from the literature on NASA PCoE and CALCE CS2 cells (leave-one-cell-out) | Discharge time to the cutoff voltage lowers MAE 5.5× (NASA, 2.94 % → 0.54 %) and 33× (CALCE, 2.85 % → 0.09 %); errors reported in the literature on these cells (median 0.18–0.61 %) sit in the range of our proxy runs |
 
 All errors are cell-averaged mean absolute errors in % of nominal capacity. Full tables are in `results/`, figures in `figures/`.
 
